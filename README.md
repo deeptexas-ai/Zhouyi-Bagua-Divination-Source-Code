@@ -59,17 +59,32 @@ python main.py
 ## 📸 界面预览
 
 | 八字排盘 | 紫微斗数 | 奇门遁甲 |
-|:--------:|:--------:|:--------:|
-![屏幕截图 2024-10-29 115350](https://github.com/user-attachments/assets/ef463521-50a7-4236-b109-1fdeccd77d35)
-![屏幕截图 2024-10-29 115251](https://github.com/user-attachments/assets/4aa406ec-cb5e-4181-b119-b02812fc1007)
-![屏幕截图 2024-10-29 114720](https://github.com/user-attachments/assets/dac1e7dd-5f17-49ea-afd0-6d4117e4dc25)
-![屏幕截图 2024-10-29 114655](https://github.com/user-attachments/assets/91201b95-cb1d-4c12-9216-c145b0febf9e)
-![屏幕截图 2024-10-29 114634](https://github.com/user-attachments/assets/80435768-9e5f-47c1-afa0-46ade13eaa79)
-![屏幕截图 2024-10-29 114624](https://github.com/user-attachments/assets/9c02147e-b064-4905-8fee-330a9b3146dc)
-![屏幕截图 2024-10-29 114423](https://github.com/user-attachments/assets/6a9581b9-43e2-4f9d-8c2b-fc165922bb04)
-![屏幕截图 2024-10-29 112845](https://github.com/user-attachments/assets/b0bc4096-66b2-4aef-98e4-3c4773f3fff5)
+![无极八字排盘](Screenshots/wujibazi.png)  
+**无极八字排盘界面 | Wuji Bazi Chart**
 
-> *真实界面视频请联系获取Telegram: @xuzongbin001，或直接运行项目体验。*
+![八字排盘](Screenshots/baizhipaipan.png)  
+**四柱八字排盘界面 | Four Pillars Bazi**
+
+![流年运势](Screenshots/liunian.png)  
+**流年运势分析 | Annual Luck Analysis**
+
+![大六壬排盘](Screenshots/daliuren.png)  
+**大六壬排盘界面 | Da Liuren Chart**
+
+![综合排盘](Screenshots/paipan.png)  
+**综合排盘总览界面 | Overall Divination Chart**
+
+![七政四余](Screenshots/qizhengsiyu.png)  
+**七政四余排盘界面 | Qizheng Siyü Chart**
+
+![七政四余2](Screenshots/qizheng2.png)  
+**七政四余详细排盘 | Qizheng Detailed**
+
+![五行分析](Screenshots/wuxing.png)  
+**五行分析界面 | Five Elements Analysis**
+
+
+
 
 ## 🧧 占卜演示 / Divination Demo / 占卜示範
 
