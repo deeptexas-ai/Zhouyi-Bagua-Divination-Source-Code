@@ -6,7 +6,7 @@
 [![Docker](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker)](https://hub.docker.com)
 [![License](https://img.shields.io/github/license/deeptexas-ai/zhouyi-bagua-divination?style=for-the-badge)](https://github.com/deeptexas-ai/zhouyi-bagua-divination/blob/main/LICENSE)
 
-**专业周易八卦占卜工具 / Professional Zhouyi Bagua divination / 專業周易八卦占卜工具|周易八卦排盘系统**  
+**专业周易八卦占卜工具 / 周易排盘/紫微斗数/七政四余/Professional Zhouyi Bagua divination / 專業周易八卦占卜工具|周易八卦排盘系统**  
 传统三币法起卦+64卦详解+八卦罗盘+爻辞解读，支持手机/桌面 / Traditional coin toss + 64 hexagrams + Bagua compass + line interpretations / 傳統三幣法起卦+64卦詳解+八卦羅盤+爻辭解讀.
 
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue.svg)](LICENSE)
