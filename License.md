@@ -1,7 +1,7 @@
 text
 MIT License
 
-Copyright (c) [2026] [deeptexas-ai]
+Copyright (c) [2026] [masterai-top]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,5 +27,5 @@ SOFTWARE.
 如需获得本项目的商用授权、完整未加密源码、技术支持或定制开发服务，请联系：
 
 📱 Telegram：@xuzongbin001
-
+- Email: masterai918@gmail.com
 Copyright © 2026 masterai-top. All Rights Reserved.
