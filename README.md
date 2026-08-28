@@ -1,4 +1,6 @@
-# Zhouyi Bagua Divination
+# 周易八卦占卜源码 | Zhouyi Bagua Divination Source Code
+
+[简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
 
 [![GitHub stars](https://img.shields.io/github/stars/deeptexas-ai/zhouyi-bagua-divination?style=for-the-badge)](https://github.com/deeptexas-ai/zhouyi-bagua-divination)
 [![Play Demo](https://img.shields.io/badge/%E5%8D%A6%E8%B1%A1-Online-brightgreen?style=for-the-badge)](https://zhouyi-demo.com)
@@ -83,7 +85,13 @@ python main.py
 ![五行分析](Screenshots/wuxing.png)  
 **五行分析界面 | Five Elements Analysis**
 
+## 文档
 
+- [项目主页](docs/index.html)
+- [功能介绍](docs/features.html)
+- [架构说明](docs/architecture.html)
+- [部署指南](docs/deployment.html)
+- [合规使用](docs/responsible-use.html)
 
 
 ## 🧧 占卜演示 / Divination Demo / 占卜示範
