@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/sitemap.xml
