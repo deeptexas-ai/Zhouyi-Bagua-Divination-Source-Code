@@ -5,19 +5,197 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zhouyi Bagua Divination Source Code</title>
   <meta name="description" content="周易八卦占卜源码，I Ching 64 hexagrams, three-coin divination, Bagua compass, Bazi, Ziwei, Qimen and Chinese metaphysics source code.">
+  <meta name="keywords" content="周易源码, 易经源码, Zhouyi source code, I Ching divination, Bagua compass, AI fortune telling, Bazi source code, Ziwei Doushu source code, Qimen Dunjia source code">
+  <link rel="canonical" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/">
   <style>
-body{font-family:Arial,"Microsoft YaHei",sans-serif;margin:0;color:#17202a;background:#fbfaf6;line-height:1.65}
-header{background:#243447;color:white;padding:48px 20px}
-main{max-width:1080px;margin:0 auto;padding:30px 20px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
-.card{background:white;border:1px solid #e6e1d8;border-radius:8px;padding:18px}
-.tag{display:inline-block;background:#efe7d5;border:1px solid #dfc894;border-radius:999px;padding:5px 9px;margin:3px}
-a{color:#0b63ce}footer{padding:24px 20px;text-align:center;color:#57606a;background:white;border-top:1px solid #e6e1d8}
-</style>
+    body {
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      margin: 0;
+      color: #17202a;
+      background: #fbfaf6;
+      line-height: 1.65;
+    }
+    header {
+      background: #243447;
+      color: white;
+      padding: 48px 20px;
+    }
+    main {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 30px 20px 46px;
+    }
+    .wrap {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(30px, 5vw, 50px);
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 36px 0 12px;
+      font-size: 28px;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 18px;
+      letter-spacing: 0;
+    }
+    p {
+      margin: 0 0 14px;
+    }
+    .lead {
+      max-width: 900px;
+      color: #ecf4ff;
+      font-size: 18px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: white;
+      border: 1px solid #e6e1d8;
+      border-radius: 8px;
+      padding: 18px;
+    }
+    .screenshot-card {
+      padding: 12px;
+    }
+    .screenshot-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      border: 1px solid #e6e1d8;
+      background: #fff;
+    }
+    .tag {
+      display: inline-block;
+      background: #efe7d5;
+      border: 1px solid #dfc894;
+      border-radius: 999px;
+      padding: 5px 9px;
+      margin: 3px;
+      color: #4d3712;
+    }
+    a {
+      color: #0b63ce;
+    }
+    .button {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: #fff;
+      background: #0b63ce;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    footer {
+      padding: 24px 20px;
+      text-align: center;
+      color: #57606a;
+      background: white;
+      border-top: 1px solid #e6e1d8;
+    }
+  </style>
 </head>
 <body>
-  <header><h1>周易八卦占卜源码 | Zhouyi Bagua Divination Source Code</h1><p>周易八卦、64 卦、三币起卦、卦辞爻辞、八字紫微奇门和 AI 命理解读产品源码。</p></header>
-  <main><section class="grid"><div class="card"><h2>64 Hexagrams</h2><p>64 卦、384 爻、卦辞、爻辞、本卦、动爻和变卦解读。</p></div><div class="card"><h2>Three-Coin Divination</h2><p>传统三币法起卦、六爻生成、卦象分析和建议输出。</p></div><div class="card"><h2>Bagua Compass</h2><p>乾坤震巽坎离艮兑，方位、五行、属性和罗盘展示。</p></div><div class="card"><h2>Metaphysics Extensions</h2><p>四柱八字、紫微斗数、奇门遁甲、七政四余、大六壬和五行分析。</p></div></section><section><h2>SEO Keywords</h2><p><span class="tag">周易源码</span><span class="tag">易经源码</span><span class="tag">Zhouyi source code</span><span class="tag">I Ching divination</span><span class="tag">Bagua compass</span><span class="tag">AI fortune telling</span></p></section><p><a href="features.html">Features</a> | <a href="architecture.html">Architecture</a> | <a href="deployment.html">Deployment</a> | <a href="responsible-use.html">Responsible Use</a></p></main>
-  <footer>GitHub: <a href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">Zhouyi-Bagua-Divination-Source-Code</a> | Telegram @xuzongbin001 | masterai918@gmail.com</footer>
+  <header>
+    <div class="wrap">
+      <h1>周易八卦占卜源码 | Zhouyi Bagua Divination Source Code</h1>
+      <p class="lead">面向传统文化、命理工具和 AI 解读产品的周易八卦占卜源码，覆盖 64 卦、三币起卦、八卦罗盘、四柱八字、紫微斗数、奇门遁甲、七政四余、大六壬和五行分析。</p>
+      <a class="button" href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">View GitHub Repository</a>
+      <a class="button" href="features.html">Features</a>
+      <a class="button" href="architecture.html">Architecture</a>
+      <a class="button" href="deployment.html">Deployment</a>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>Core Modules</h2>
+      <div class="grid">
+        <div class="card"><h3>64 Hexagrams</h3><p>64 卦、384 爻、卦辞、爻辞、本卦、动爻和变卦解读。</p></div>
+        <div class="card"><h3>Three-Coin Divination</h3><p>传统三币法起卦、六爻生成、卦象分析和建议输出。</p></div>
+        <div class="card"><h3>Bagua Compass</h3><p>乾坤震巽坎离艮兑，方位、五行、属性和罗盘展示。</p></div>
+        <div class="card"><h3>Metaphysics Extensions</h3><p>四柱八字、紫微斗数、奇门遁甲、七政四余、大六壬和五行分析。</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Product Screenshots</h2>
+      <p>Product screenshots are loaded from the repository <code>Screenshots/</code> folder using GitHub raw image URLs.</p>
+      <div class="grid">
+        <div class="card screenshot-card">
+          <h3>八字排盘 / Bazi Chart</h3>
+          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/baizhipaipan.png" alt="Zhouyi Bagua Bazi chart source code product screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>大六壬 / Da Liuren</h3>
+          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/daliuren.png" alt="Da Liuren divination system source code screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>流年运势 / Annual Fortune</h3>
+          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/liunian.png" alt="Zhouyi Bazi annual fortune report screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>命理排盘 / Destiny Chart</h3>
+          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/paipan.png" alt="Chinese metaphysics destiny chart system screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>奇门遁甲 / Qimen Dunjia</h3>
+          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/qizheng2.png" alt="Qimen Dunjia and Chinese astrology product screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>七政四余 / Qizheng Siyu</h3>
+          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/qizhengsiyu.png" alt="Qizheng Siyu astrology system screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>五纪八字 / Wuji Bazi</h3>
+          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/wujibazi.png" alt="Wuji Bazi divination source code screenshot" loading="lazy">
+        </div>
+        <div class="card screenshot-card">
+          <h3>五行分析 / Five Elements</h3>
+          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/wuxing.png" alt="Five elements Chinese metaphysics analysis screenshot" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>SEO Keywords</h2>
+      <p>
+        <span class="tag">周易源码</span>
+        <span class="tag">易经源码</span>
+        <span class="tag">Zhouyi source code</span>
+        <span class="tag">I Ching divination</span>
+        <span class="tag">Bagua compass</span>
+        <span class="tag">AI fortune telling</span>
+        <span class="tag">Bazi source code</span>
+        <span class="tag">Qimen Dunjia source code</span>
+      </p>
+    </section>
+
+    <section>
+      <h2>Documentation</h2>
+      <div class="grid">
+        <div class="card"><h3>Features</h3><p><a href="features.html">Divination, 64 hexagrams, Bagua, Bazi, Ziwei and Qimen modules</a></p></div>
+        <div class="card"><h3>Architecture</h3><p><a href="architecture.html">Frontend, engine, data and AI interpretation structure</a></p></div>
+        <div class="card"><h3>Deployment</h3><p><a href="deployment.html">GitHub Pages, private configuration and deployment checklist</a></p></div>
+        <div class="card"><h3>Responsible Use</h3><p><a href="responsible-use.html">Cultural, advisory and responsible content boundaries</a></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    GitHub: <a href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code</a>
+    | Telegram @xuzongbin001 | masterai918@gmail.com
+  </footer>
 </body>
 </html>
