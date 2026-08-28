@@ -52,7 +52,32 @@ tests/                  # 卦象、排盤、日期與數據校驗測試
 
 Telegram：`@xuzongbin001`  
 Email：`masterai918@gmail.com`
+## 📸 界面预览
 
+| 八字排盘 | 紫微斗数 | 奇门遁甲 |
+![无极八字排盘](Screenshots/wujibazi.png)  
+**无极八字排盘界面 | Wuji Bazi Chart**
+
+![八字排盘](Screenshots/baizhipaipan.png)  
+**四柱八字排盘界面 | Four Pillars Bazi**
+
+![流年运势](Screenshots/liunian.png)  
+**流年运势分析 | Annual Luck Analysis**
+
+![大六壬排盘](Screenshots/daliuren.png)  
+**大六壬排盘界面 | Da Liuren Chart**
+
+![综合排盘](Screenshots/paipan.png)  
+**综合排盘总览界面 | Overall Divination Chart**
+
+![七政四余](Screenshots/qizhengsiyu.png)  
+**七政四余排盘界面 | Qizheng Siyü Chart**
+
+![七政四余2](Screenshots/qizheng2.png)  
+**七政四余详细排盘 | Qizheng Detailed**
+
+![五行分析](Screenshots/wuxing.png)  
+**五行分析界面 | Five Elements Analysis**
 ## License
 
 具體以倉庫 License 文件為準。公開使用、商業部署和閉源集成前，請確認授權邊界。
