@@ -1,212 +1,71 @@
-# 周易八卦占卜源码 | Zhouyi Bagua Divination Source Code
+# 周易排盘与八字源码 | JavaScript Bazi & Chinese Metaphysics
 
-[简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [产品网站](https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/)
 
-[![GitHub stars](https://img.shields.io/github/stars/deeptexas-ai/zhouyi-bagua-divination?style=for-the-badge)](https://github.com/deeptexas-ai/zhouyi-bagua-divination)
-[![Play Demo](https://img.shields.io/badge/%E5%8D%A6%E8%B1%A1-Online-brightgreen?style=for-the-badge)](https://zhouyi-demo.com)
-[![GitHub issues](https://img.shields.io/github/issues/deeptexas-ai/zhouyi-bagua-divination?style=for-the-badge)](https://github.com/deeptexas-ai/zhouyi-bagua-divination/issues)
-[![Docker](https://img.shields.io/badge/Docker-blue?style=for-the-badge&logo=docker)](https://hub.docker.com)
-[![License](https://img.shields.io/github/license/deeptexas-ai/zhouyi-bagua-divination?style=for-the-badge)](https://github.com/deeptexas-ai/zhouyi-bagua-divination/blob/main/LICENSE)
+这是一个以浏览器 JavaScript 为主体的传统术数排盘源码仓库。公开代码覆盖四柱八字、干支与农历换算、十神与神煞、刑冲合害、五行、大运流年、时区与真太阳时相关计算，并包含七政四余、大六壬及紫微运势接口调用等产品组件。
 
-**专业周易八卦占卜工具 / 易经源码/周易排盘/紫微斗数/七政四余/ 專業周易八卦占卜工具|周易八卦排盘系统**  
-传统三币法起卦+64卦详解+八卦罗盘+爻辞解读，支持手机/桌面 / Traditional coin toss + 64 hexagrams + Bagua compass + line interpretations / 傳統三幣法起卦+64卦詳解+八卦羅盤+爻辭解讀.
+> 范围说明：本页只描述公开代码与真实截图可以核实的内容。仓库没有 `package.json`、Docker 配置、Python 服务、SQLite 数据库或完整的 64 卦数据，因此不应宣传为已经验证的一键部署或完整三币六爻系统。部分界面调用 `/api`，实际部署前需要补齐对应服务。
 
-[![License: AGPL v3](https://img.shields.io/badge/License-AGPLv3-blue.svg)](LICENSE)
-[![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript)
-[![Demo](https://img.shields.io/badge/在线演示-周易排盘-brightgreen)](#)
-[![Stars](https://img.shields.io/github/stars/deeptexas-ai/Zhouyi-Bagua?style=social)]()
+## 产品界面
 
-**集千年术数之大成** — 四柱八字、紫微斗数、奇门遁甲、七政四余、大六壬，数十种算法网页实时排盘。
+| 四柱八字与大运 | 七政四余排盘 |
+| --- | --- |
+| ![四柱八字、大运流年与真太阳时界面](docs/assets/screenshots/wujibazi.png) | ![七政四余星曜、时区与经纬度输入界面](docs/assets/screenshots/qizhengsiyu.png) |
+| 大六壬盘式 | 五行趋势与排盘记录 |
+| ![大六壬天地盘、四课三传排盘结果](docs/assets/screenshots/daliuren.png) | ![五行趋势图和排盘历史记录](docs/assets/screenshots/wuxing.png) |
 
-## ✨ 核心功能
+## 主要功能
 
-| 模块 | 内容 |
-|------|------|
-| 📜 **四柱八字** | 年月日时四柱、十神、藏干、大运流年 |
-| ⭐ **紫微斗数** | 十二宫位、星曜分布、四化飞星 |
-| 🧭 **奇门遁甲** | 阴阳遁局、八门九星、值符值使 |
-| 🌌 **七政四余** | 七曜四余、星躔度数、天星择日 |
-| 🌪️ **大六壬** | 天地盘、四课三传、六壬神煞 |
-| 📅 **阴阳五行** | 干支纪年、节气交接、神煞推演 |
-## 🎯 占卜场景 / Use Cases / 占卜場景
-💼 事业决策
-❤️ 感情运势
-💰 财运分析
-🚶 出行吉凶
-📚 学业选择
-🏠 家居风水
+### 四柱八字与历法
 
-## 🎯 快速占卜 / Quick Divination / 快速占卜
+- 根据公历时间生成干支、四柱与十神相关数据。
+- 公历与农历转换，包含节气、生肖、儒略日等历法组件。
+- 大运、流年、流月、流日、流时和换运时间展示。
+- 支持时区、经纬度及真太阳时相关输入。
 
-```bash
-# Web版 (推荐)
-npm install && npm start
-# 访问 http://localhost:3000
+### 五行、十神与神煞
 
-# Docker版
-docker run -p 3000:3000 zhouyi-bagua
+- 天干地支与木、火、土、金、水的映射和生克关系。
+- 十神、藏干以及干支刑、冲、合、害关系。
+- `shensha.js` 中的神煞规则、说明和按干支查询逻辑。
+- 五行趋势参数、图表及历史排盘界面。
 
-# Python版
-pip install -r requirements.txt
-python main.py
-```
+### 七政四余、大六壬与扩展组件
 
+- 七政四余星曜选择、经纬度、时区与排盘结果界面。
+- `kinliuren.js` 提供大六壬盘式计算组件。
+- `index.js` 包含紫微运势图和反推功能的接口调用与图表渲染代码。
+- 搜盘、拆补、宫位、九星、八门等筛选项可从截图界面核实。
 
-## 📸 联系：
+## 代码结构
 
-📱 Telegram: @xuzongbin001
+| 文件 | 可核实职责 |
+| --- | --- |
+| `index.html` / `index.js` | 排盘页面、输入流程、图表和 API 交互 |
+| `lunar.js` / `nongli.js` | 公历、农历、干支与节气计算 |
+| `paipan.js` | 天文历法、节气、真太阳时和排运基础 |
+| `paipan.gx.js` | 十神、藏干、刑冲合害关系 |
+| `shensha.js` | 神煞规则、说明与查询 |
+| `kinliuren.js` | 大六壬相关计算 |
+| `timezone.js` | 时区、经纬度与偏移数据 |
 
-📧 Email: masterai918@gmail.com
+## 更多真实截图
 
-## 📸 界面预览
+| 搜盘条件 | 流年星盘 |
+| --- | --- |
+| ![八字搜盘条件与格局筛选](docs/assets/screenshots/baizhipaipan.png) | ![流年星体黄经与星盘数据](docs/assets/screenshots/liunian.png) |
+| 七政四余综合盘 | 星曜组合结果 |
+| ![七政四余综合排盘数据表](docs/assets/screenshots/paipan.png) | ![七政四余多组星曜结果](docs/assets/screenshots/qizheng2.png) |
 
-| 八字排盘 | 紫微斗数 | 奇门遁甲 |
-![无极八字排盘](Screenshots/wujibazi.png)  
-**无极八字排盘界面 | Wuji Bazi Chart**
+## 使用与部署边界
 
-![八字排盘](Screenshots/baizhipaipan.png)  
-**四柱八字排盘界面 | Four Pillars Bazi**
+公开页面可以直接阅读源文件，但完整运行环境可能依赖仓库外的样式、图表库和 `/api` 服务。上线前应核对依赖授权、接口实现、数据隐私和计算结果，并补充测试。命理与占卜内容只适合传统文化研究和娱乐参考，不应替代医疗、法律、投资或其他专业建议。
 
-![流年运势](Screenshots/liunian.png)  
-**流年运势分析 | Annual Luck Analysis**
+## 联系方式
 
-![大六壬排盘](Screenshots/daliuren.png)  
-**大六壬排盘界面 | Da Liuren Chart**
+- Telegram：[@xuzongbin001](https://t.me/xuzongbin001)
+- Email：[masterai918@gmail.com](mailto:masterai918@gmail.com)
 
-![综合排盘](Screenshots/paipan.png)  
-**综合排盘总览界面 | Overall Divination Chart**
+## License
 
-![七政四余](Screenshots/qizhengsiyu.png)  
-**七政四余排盘界面 | Qizheng Siyü Chart**
-
-![七政四余2](Screenshots/qizheng2.png)  
-**七政四余详细排盘 | Qizheng Detailed**
-
-![五行分析](Screenshots/wuxing.png)  
-**五行分析界面 | Five Elements Analysis**
-
-## 文档
-
-- [项目主页](docs/index.html)
-- [功能介绍](docs/features.html)
-- [架构说明](docs/architecture.html)
-- [部署指南](docs/deployment.html)
-- [合规使用](docs/responsible-use.html)
-
-
-## 🧧 占卜演示 / Divination Demo / 占卜示範
-
-**步骤1: 提出问题**
-"Should I change jobs now?" / "现在换工作合适吗？" / "現在換工作合適嗎？"
-
-**步骤2: 三币起卦**
-上卦: 乾 ☰ (3阳爻)
-下卦: 坤 ☷ (3阴爻)
-本卦: 泰卦 第11卦
-
-**步骤3: 卦象解读**
-泰: 通泰大吉
-象曰: 天地交泰
-时宜: 进取发展
-
-![占卜过程](https://via.placeholder.com/1000x600/4A90E2/FFFFFF?text=%E4%B8%89%E5%B8%81%E8%B5%B7%E5%8D%A6+-+%E6%9D%A5%E8%87%AA%E5%AE%9E%E6%9C%AC%E5%B8%81%E6%8A%BD)
-![卦象图](https://via.placeholder.com/1000x500/E94B3C/FFFFFF?text=%E6%B3%B0%E5%8D%A6+-+%E7%89%9B%E5%91%82%E9%A1%AF%E5%AD%90%E5%8D%A6)
-![八卦罗盘](https://via.placeholder.com/1000x500/F5A623/FFFFFF?text=%E5%85%AB%E5%8D%A6%E7%BD%97%E7%9B%98+-+Bagua+Compass)
-![爻辞解读](https://via.placeholder.com/1000x600/7ED321/FFFFFF?text=%E7%89%84%E8%BE%9E%E8%A7%A3%E8%AF%BB+-+Line+Interpretations)
-
----
-
-## 🏛️ 八卦罗盘 / Bagua Compass / 八卦羅盤
-
-| 卦 | 宫位 | 属性 | 方位 | 五行 |
-|----|------|------|------|------|
-| 乾☰ | 西北 | 天 | NW | 金 |
-| 坤☷ | 艮 | 地 | SW | 土 |
-| 震☳ | 东方 | 雷 | E | 木 |
-| 巽☴ | 东南 | 风 | SE | 木 |
-| 坎☵ | 北方 | 水 | N | 水 |
-| 离☲ | 南方 | 火 | S | 火 |
-| 艮☶ | 东北 | 山 | NE | 土 |
-| 兑☱ | 西方 | 泽 | W | 金 |
-
-## 🎯 64卦速查 / 64 Hexagrams / 64卦速查
-乾 ☰☰☰☰☰☰ 天天健
-
-坤 ☷☷☷☷☷☷ 地地顺
-
-屯 ☷☰☰☰☰☰ 水雷屯
-...
-
-泰 ☰☰☰☷☷☷ 天地泰 ← 当前示例
-
-**[完整64卦表](docs/64-hexagrams.md)**
-
-## 🚀 三步占卜法 / 3-Step Method / 三步占卜法
-
-```bash
-# 步骤1: 静心提问题
-npm start → 输入问题
-
-# 步骤2: 三币起卦 (传统法)
-点击"起卦" → 自动生成6爻
-
-# 步骤3: 解读结果
-本卦 + 动爻 + 变卦 → 完整建议
-```
-
-## 🛠️ 技术架构 / Tech Stack / 技術架構
-
-🎨 前端: React + TypeScript + Tailwind
-🤖 占卜引擎: 传统算法复现
-📊 数据库: SQLite (卦辞/用户记录)
-🎨 可视化: SVG卦象 + D3.js罗盘
-📦 打包: Vite + Electron (桌面)
-🚀 部署: Docker / Vercel / 自建
-
-
-**准确率：传统算法100%复现！**
-
-## 📊 使用统计 / Usage Stats / 使用統計
-✅ 64卦全覆盖
-✅ 384爻完整解读
-✅ 8卦罗盘精确
-✅ 三币法传统
-✅ 手机适配完美
-✅ 离线可用
-
-
-## 📦 版本发布 / Releases / 版本發佈
-
-### 🚀 v1.0.0 (稳定版)
-✅ 传统三币起卦  
-✅ 64卦完整解读  
-✅ 八卦罗盘  
-✅ 爻辞详解  
-✅ 多平台支持  
-
-**[立即下载](https://github.com/deeptexas-ai/zhouyi-bagua-divination/releases/latest)**
-
-## ❓ 常见问题 / FAQ / 常見問題
-
-**Q: 准确吗？**  
-**A:** 传统算法100%复现，智慧参考
-
-**Q: 如何提问题？**  
-**A:** 具体是非问题，避免模糊
-
-**Q: 动爻怎么看？**  
-**A:** 本卦现状，变卦未来
-
-**Q: 手机能用吗？**  
-**A:** 完美响应式适配
-
-## 🤝 贡献指南 / Contributing / 貢獻指南
-
-
-
-## 📄 LicenseMIT License - 
-传统文化传播友好
-Copyright (c) 2026 deeptexas-ai
-
----
-
+以仓库中的 [License.md](License.md) 为准。第三方历法和算法代码可能保留各自署名及授权要求，商用前请逐项核实。

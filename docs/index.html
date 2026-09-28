@@ -1,202 +1,39 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta name="google-site-verification" content="rrp5Uvgzi-1-rMxUBfhV3wjlNrFqzwnqiA4e3qsOLEM" />
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zhouyi Bagua Divination Source Code</title>
-  <meta name="description" content="周易八卦占卜源码，I Ching 64 hexagrams, three-coin divination, Bagua compass, Bazi, Ziwei, Qimen and Chinese metaphysics source code.">
-  <meta name="keywords" content="周易源码, 易经源码, Zhouyi source code, I Ching divination, Bagua compass, AI fortune telling, Bazi source code, Ziwei Doushu source code, Qimen Dunjia source code">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Zhouyi Bazi Chart Source | JavaScript</title>
+  <meta name="description" content="JavaScript source components for Bazi, lunar calendar, Five Elements, Shen Sha, Qizheng Siyu and Da Liuren chart interfaces with real product screens.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
   <link rel="canonical" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/">
-  <style>
-    body {
-      font-family: Arial, "Microsoft YaHei", sans-serif;
-      margin: 0;
-      color: #17202a;
-      background: #fbfaf6;
-      line-height: 1.65;
-    }
-    header {
-      background: #243447;
-      color: white;
-      padding: 48px 20px;
-    }
-    main {
-      max-width: 1080px;
-      margin: 0 auto;
-      padding: 30px 20px 46px;
-    }
-    .wrap {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-    h1 {
-      margin: 0 0 14px;
-      font-size: clamp(30px, 5vw, 50px);
-      line-height: 1.15;
-      letter-spacing: 0;
-    }
-    h2 {
-      margin: 36px 0 12px;
-      font-size: 28px;
-      letter-spacing: 0;
-    }
-    h3 {
-      margin: 0 0 10px;
-      font-size: 18px;
-      letter-spacing: 0;
-    }
-    p {
-      margin: 0 0 14px;
-    }
-    .lead {
-      max-width: 900px;
-      color: #ecf4ff;
-      font-size: 18px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
-    }
-    .card {
-      background: white;
-      border: 1px solid #e6e1d8;
-      border-radius: 8px;
-      padding: 18px;
-    }
-    .screenshot-card {
-      padding: 12px;
-    }
-    .screenshot-card img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      border: 1px solid #e6e1d8;
-      background: #fff;
-    }
-    .tag {
-      display: inline-block;
-      background: #efe7d5;
-      border: 1px solid #dfc894;
-      border-radius: 999px;
-      padding: 5px 9px;
-      margin: 3px;
-      color: #4d3712;
-    }
-    a {
-      color: #0b63ce;
-    }
-    .button {
-      display: inline-block;
-      margin: 10px 10px 0 0;
-      padding: 10px 14px;
-      border-radius: 8px;
-      color: #fff;
-      background: #0b63ce;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    footer {
-      padding: 24px 20px;
-      text-align: center;
-      color: #57606a;
-      background: white;
-      border-top: 1px solid #e6e1d8;
-    }
-  </style>
+  <link rel="alternate" hreflang="en" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/">
+  <link rel="alternate" hreflang="zh-CN" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/zh-cn/">
+  <link rel="alternate" hreflang="zh-TW" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/zh-tw/">
+  <link rel="alternate" hreflang="x-default" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/">
+  <link rel="stylesheet" href="assets/style.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Zhouyi Bazi Chart Source">
+  <meta property="og:description" content="Browser JavaScript components for Four Pillars, lunar calendar, Five Elements, Qizheng Siyu and Da Liuren.">
+  <meta property="og:url" content="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/">
+  <meta property="og:image" content="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/assets/screenshots/wujibazi.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"Zhouyi Bazi Chart Source","description":"JavaScript source components for Four Pillars Bazi, lunar calendar, Five Elements, Shen Sha, Qizheng Siyu and Da Liuren chart interfaces.","url":"https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/","codeRepository":"https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code","programmingLanguage":"JavaScript","image":"https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/assets/screenshots/wujibazi.png"}</script>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <h1>周易八卦占卜源码 | Zhouyi Bagua Divination Source Code</h1>
-      <p class="lead">面向传统文化、命理工具和 AI 解读产品的周易八卦占卜源码，覆盖 64 卦、三币起卦、八卦罗盘、四柱八字、紫微斗数、奇门遁甲、七政四余、大六壬和五行分析。</p>
-      <a class="button" href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">View GitHub Repository</a>
-      <a class="button" href="features.html">Features</a>
-      <a class="button" href="architecture.html">Architecture</a>
-      <a class="button" href="deployment.html">Deployment</a>
-    </div>
-  </header>
-
+  <nav class="topbar"><div class="wrap"><a class="brand" href="./">Zhouyi Chart Source</a><div class="nav"><a href="./">English</a><a href="zh-cn/">简体中文</a><a href="zh-tw/">繁體中文</a><a href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">GitHub</a></div></div></nav>
+  <header class="hero"><div class="wrap hero-inner"><p class="eyebrow">JavaScript · Calendar Engine · Chart Interfaces</p><h1>Zhouyi and Bazi Chart Source</h1><p>Evidence-based source components for Four Pillars, lunar calendar, Five Elements, Shen Sha, luck cycles, Qizheng Siyu and Da Liuren, presented with real product screens.</p><div class="actions"><a class="button" href="#features">Explore the modules</a><a class="button alt" href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">View GitHub</a></div></div></header>
   <main>
-    <section>
-      <h2>Core Modules</h2>
-      <div class="grid">
-        <div class="card"><h3>64 Hexagrams</h3><p>64 卦、384 爻、卦辞、爻辞、本卦、动爻和变卦解读。</p></div>
-        <div class="card"><h3>Three-Coin Divination</h3><p>传统三币法起卦、六爻生成、卦象分析和建议输出。</p></div>
-        <div class="card"><h3>Bagua Compass</h3><p>乾坤震巽坎离艮兑，方位、五行、属性和罗盘展示。</p></div>
-        <div class="card"><h3>Metaphysics Extensions</h3><p>四柱八字、紫微斗数、奇门遁甲、七政四余、大六壬和五行分析。</p></div>
-      </div>
-    </section>
-
-    <section>
-      <h2>Product Screenshots</h2>
-      <p>Product screenshots are loaded from the repository <code>Screenshots/</code> folder using GitHub raw image URLs.</p>
-      <div class="grid">
-        <div class="card screenshot-card">
-          <h3>八字排盘 / Bazi Chart</h3>
-          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/baizhipaipan.png" alt="Zhouyi Bagua Bazi chart source code product screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>大六壬 / Da Liuren</h3>
-          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/daliuren.png" alt="Da Liuren divination system source code screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>流年运势 / Annual Fortune</h3>
-          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/liunian.png" alt="Zhouyi Bazi annual fortune report screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>命理排盘 / Destiny Chart</h3>
-          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/paipan.png" alt="Chinese metaphysics destiny chart system screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>奇门遁甲 / Qimen Dunjia</h3>
-          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/qizheng2.png" alt="Qimen Dunjia and Chinese astrology product screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>七政四余 / Qizheng Siyu</h3>
-          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/qizhengsiyu.png" alt="Qizheng Siyu astrology system screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>五纪八字 / Wuji Bazi</h3>
-          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/wujibazi.png" alt="Wuji Bazi divination source code screenshot" loading="lazy">
-        </div>
-        <div class="card screenshot-card">
-          <h3>五行分析 / Five Elements</h3>
-          <img src="https://raw.githubusercontent.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code/main/Screenshots/wuxing.png" alt="Five elements Chinese metaphysics analysis screenshot" loading="lazy">
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2>SEO Keywords</h2>
-      <p>
-        <span class="tag">周易源码</span>
-        <span class="tag">易经源码</span>
-        <span class="tag">Zhouyi source code</span>
-        <span class="tag">I Ching divination</span>
-        <span class="tag">Bagua compass</span>
-        <span class="tag">AI fortune telling</span>
-        <span class="tag">Bazi source code</span>
-        <span class="tag">Qimen Dunjia source code</span>
-      </p>
-    </section>
-
-    <section>
-      <h2>Documentation</h2>
-      <div class="grid">
-        <div class="card"><h3>Features</h3><p><a href="features.html">Divination, 64 hexagrams, Bagua, Bazi, Ziwei and Qimen modules</a></p></div>
-        <div class="card"><h3>Architecture</h3><p><a href="architecture.html">Frontend, engine, data and AI interpretation structure</a></p></div>
-        <div class="card"><h3>Deployment</h3><p><a href="deployment.html">GitHub Pages, private configuration and deployment checklist</a></p></div>
-        <div class="card"><h3>Responsible Use</h3><p><a href="responsible-use.html">Cultural, advisory and responsible content boundaries</a></p></div>
-      </div>
-    </section>
+    <section class="section white" id="features"><div class="wrap"><p class="eyebrow">Verified scope</p><h2>From birth data to structured metaphysics charts</h2><p class="lead">The public JavaScript tree connects calendar conversion, stem-branch relations, chart parameters and visualization. Features are described only where code or screenshots provide evidence.</p><div class="feature-grid"><div class="feature"><b>01 Calendar</b><h3>Solar and lunar conversion</h3><p>Solar/lunar dates, solar terms, zodiac, stems, branches and timezone data support chart input.</p></div><div class="feature"><b>02 Bazi</b><h3>Four Pillars and luck cycles</h3><p>Pillars, Ten Gods, hidden stems, major cycles and annual-to-hourly periods are represented in the UI and source.</p></div><div class="feature"><b>03 Relations</b><h3>Five Elements and Shen Sha</h3><p>Element mappings, generation/control, clash/combination relations and Shen Sha lookup rules are implemented.</p></div></div></div></section>
+    <section class="section"><div class="wrap">
+      <div class="story"><div class="media"><img src="assets/screenshots/wujibazi.png" alt="Four Pillars Bazi luck cycles apparent solar time source interface"></div><div class="story-copy"><p class="eyebrow">Four Pillars</p><h3>A timeline from natal pillars to later periods</h3><p>The screen brings together birth time, lunar date, coordinates, apparent solar time, Four Pillars, major cycles and later periods. The corresponding JavaScript handles calendar and stem-branch data.</p></div></div>
+      <div class="story reverse"><div class="media"><img src="assets/screenshots/qizhengsiyu.png" alt="Qizheng Siyu planets timezone and coordinates chart interface"></div><div class="story-copy"><p class="eyebrow">Qizheng Siyu</p><h3>Planet selections with time and location context</h3><ul><li>Time, timezone, longitude and latitude inputs</li><li>Qizheng Siyu and additional planet selections</li><li>Chart and reverse-chart entry points</li></ul></div></div>
+      <div class="story"><div class="media"><img src="assets/screenshots/daliuren.png" alt="Da Liuren Heaven Earth plates four lessons and three transmissions result"></div><div class="story-copy"><p class="eyebrow">Da Liuren</p><h3>Structured plates and transmissions</h3><p>The repository includes `kinliuren.js`, while the product screen displays a Da Liuren result with surrounding plates and the Four Lessons / Three Transmissions table.</p></div></div>
+    </div></section>
+    <section class="section dark"><div class="wrap"><p class="eyebrow">Code map</p><h2>Browser JavaScript with calendar and chart modules</h2><p class="lead">The public tree is not a Docker or Python project. Its verifiable core is JavaScript, plus UI flows that call matching API endpoints.</p><div class="code-grid"><div class="code-item"><h3>Calendar</h3><p>`lunar.js`, `nongli.js` and `paipan.js` handle dates, solar terms and astronomical calendar calculations.</p></div><div class="code-item"><h3>Relationships</h3><p>`paipan.gx.js` covers Ten Gods, hidden stems and stem/branch clash or combination rules.</p></div><div class="code-item"><h3>Shen Sha</h3><p>`shensha.js` contains rule tables, descriptions and lookup functions for chart positions.</p></div><div class="code-item"><h3>Application</h3><p>`index.js` connects inputs, chart rendering, Five Elements views and API-dependent Ziwei flows.</p></div></div></div></section>
+    <section class="section white"><div class="wrap"><h2>Real result screens, not placeholder art</h2><p class="lead">The screenshots show the actual density and structure of search filters, chart tables, planet positions and Five Elements history.</p><div class="gallery"><figure><img src="assets/screenshots/baizhipaipan.png" alt="Bazi search conditions and chart pattern filters"><figcaption>Bazi search and pattern filters</figcaption></figure><figure><img src="assets/screenshots/liunian.png" alt="Annual planet longitude and chart data"><figcaption>Annual planet-position data</figcaption></figure><figure><img src="assets/screenshots/paipan.png" alt="Qizheng Siyu detailed chart result table"><figcaption>Qizheng Siyu result table</figcaption></figure><figure><img src="assets/screenshots/wuxing.png" alt="Five Elements trend and saved chart history"><figcaption>Five Elements trend and chart history</figcaption></figure></div></div></section>
+    <section class="section"><div class="wrap"><div class="contact"><div><h2>Discuss source and delivery scope</h2><p>Telegram: <a href="https://t.me/xuzongbin001">@xuzongbin001</a>　Email: <a href="mailto:masterai918@gmail.com">masterai918@gmail.com</a></p></div><a class="button" href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">Open repository</a></div><p class="scope">The public tree does not verify one-click deployment, Docker, Python, SQLite, a complete 64-hexagram dataset or every API service. Verify dependencies, licenses, privacy and calculations before use. Divination content is for cultural study and entertainment and must not replace professional advice.</p></div></section>
   </main>
-
-  <footer>
-    GitHub: <a href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code</a>
-    | Telegram @xuzongbin001 | masterai918@gmail.com
-  </footer>
+  <footer class="footer"><div class="wrap"><span>Zhouyi Bazi Chart Source</span><span><a href="zh-cn/">简体中文</a> · <a href="zh-tw/">繁體中文</a> · <a href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">GitHub</a></span></div></footer>
 </body>
 </html>

@@ -1,82 +1,71 @@
-# Zhouyi Bagua Divination Source Code
+# Zhouyi Chart and Bazi Source Code | JavaScript Chinese Metaphysics
 
-[简体中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
+[简体中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [Product site](https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/)
 
-Zhouyi Bagua Divination Source Code is a Chinese metaphysics and I Ching divination source code project for traditional culture, fortune tools and AI interpretation products. It covers three-coin divination, 64 hexagrams, 384 lines, Bagua compass, hexagram texts, line interpretations, Bazi, Ziwei Doushu, Qimen Dunjia, Qizheng Siyu, Da Liuren, five elements analysis and real-time web chart generation.
+This repository contains browser-oriented JavaScript source components for Chinese metaphysics chart generation. The public tree covers Four Pillars Bazi, stem-branch and lunar-calendar conversion, Ten Gods and Shen Sha, branch relationships, Five Elements, luck cycles, time zones and apparent solar-time inputs. Product screens and code also expose Qizheng Siyu, Da Liuren and API-driven Ziwei chart components.
 
-## Positioning
+> Scope: this page separates code-verified behavior from screenshot-demonstrated interfaces. The repository does not contain `package.json`, Docker configuration, a Python service, SQLite data or a complete 64-hexagram dataset. It should not be described as verified one-click deployment or a complete three-coin I Ching engine. Some UI flows call `/api` and require matching services.
 
-- Zhouyi source code, I Ching source code and Bagua divination system
-- Three-coin divination, 64 hexagrams, changing lines and interpretation workflow
-- Extension direction for Bazi, Ziwei Doushu, Qimen Dunjia, Qizheng Siyu and Da Liuren
-- Suitable for H5, Web, desktop, AI fortune telling, Chinese culture and paid report products
-- Suitable for commercial evaluation, secondary development and private deployment
+## Product screens
 
-## Core Features
+| Bazi and luck cycles | Qizheng Siyu chart |
+| --- | --- |
+| ![Four Pillars Bazi luck cycles and solar time screen](docs/assets/screenshots/wujibazi.png) | ![Qizheng Siyu planets timezone and coordinates screen](docs/assets/screenshots/qizhengsiyu.png) |
+| Da Liuren chart | Five Elements trend and history |
+| ![Da Liuren chart result with Heaven and Earth plates](docs/assets/screenshots/daliuren.png) | ![Five Elements trend chart and saved chart history](docs/assets/screenshots/wuxing.png) |
 
-- Bagua foundation: Qian, Kun, Zhen, Xun, Kan, Li, Gen and Dui with directions and five elements
-- Divination workflow: traditional three-coin method, six-line generation, original hexagram, moving lines, changed hexagram and interpretation
-- 64 hexagram system: names, symbols, hexagram texts, line texts, auspiciousness, timing and advice output
-- Metaphysics extensions: Bazi, Ziwei Doushu, Qimen Dunjia, Qizheng Siyu and Da Liuren
-- Product scenarios: career decision, relationship fortune, wealth analysis, travel timing, study choice and home Feng Shui
-- Technical form: real-time web chart generation, mobile adaptation, offline use and extensible AI interpretation
+## Verified capabilities
 
-## Suggested Structure
+### Four Pillars and calendar calculations
 
-```text
-Screenshots/            # Product screenshots
-docs/                   # GitHub Pages product and technical documentation
-data/                   # 64 hexagrams, line texts, Shen Sha and metaphysics data examples
-engine/                 # Divination, chart generation, interpretation and algorithm modules
-ui/                     # Web/H5 UI components
-config.example/         # Desensitized configuration examples
-scripts/                # Build, deployment and maintenance scripts
-tests/                  # Hexagram, chart, date and data validation tests
-.github/workflows/      # CI and GitHub Pages workflows
-```
+- Generate stems, branches, pillars and related Ten Gods data from date and time.
+- Convert solar and lunar calendars with terms, zodiac and Julian-day components.
+- Display major luck cycles and annual, monthly, daily and hourly periods.
+- Accept timezone, coordinates and apparent solar-time related inputs.
 
-## Public Repository Scope
+### Five Elements, Ten Gods and Shen Sha
 
-The public repository should show product structure, selected source examples, screenshots, data examples and technical documentation. Do not publish real user profiles, consultation records, order data, payment secrets, admin accounts, production configuration, private prompts or unlicensed assets.
+- Map stems and branches to Wood, Fire, Earth, Metal and Water.
+- Represent hidden stems and clash, combination, harm and punishment relationships.
+- Query Shen Sha rules and descriptions implemented in `shensha.js`.
+- Render Five Elements parameters, trends and chart-history interfaces.
 
-## Documentation
+### Qizheng Siyu, Da Liuren and extension components
 
-- [Project Home](docs/index.html)
-- [Features](docs/features.html)
-- [Architecture](docs/architecture.html)
-- [Deployment](docs/deployment.html)
-- [Responsible Use](docs/responsible-use.html)
+- Qizheng Siyu planet selection, coordinates, timezone and result interfaces.
+- Da Liuren calculation components in `kinliuren.js`.
+- Ziwei trend and reverse-query API calls plus chart rendering in `index.js`.
+- Search-chart, palace, Nine Stars and Eight Gates filters visible in product screens.
+
+## Source map
+
+| File | Verified responsibility |
+| --- | --- |
+| `index.html` / `index.js` | Chart UI, input flows, visualization and API interaction |
+| `lunar.js` / `nongli.js` | Solar/lunar calendar, stems, branches and solar terms |
+| `paipan.js` | Astronomical calendar, solar terms, apparent solar time and luck cycles |
+| `paipan.gx.js` | Ten Gods, hidden stems and stem/branch relationships |
+| `shensha.js` | Shen Sha rules, descriptions and lookup |
+| `kinliuren.js` | Da Liuren calculations |
+| `timezone.js` | Timezone, coordinate and offset data |
+
+## More real screenshots
+
+| Chart search filters | Annual planet positions |
+| --- | --- |
+| ![Bazi chart search conditions and pattern filters](docs/assets/screenshots/baizhipaipan.png) | ![Annual planet longitude and chart data](docs/assets/screenshots/liunian.png) |
+| Qizheng Siyu result | Planet combination output |
+| ![Qizheng Siyu detailed chart table](docs/assets/screenshots/paipan.png) | ![Qizheng Siyu multi-column planet output](docs/assets/screenshots/qizheng2.png) |
+
+## Runtime and responsible-use boundary
+
+The public files can be inspected directly, but the complete runtime may depend on styles, chart libraries and `/api` services outside this tree. Verify dependencies, licenses, service implementations, privacy and calculation results before deployment. Divination content is for cultural study and entertainment and must not replace medical, legal, investment or other professional advice.
 
 ## Contact
 
-Telegram: `@xuzongbin001`  
-Email: `masterai918@gmail.com`
-## 📸 界面预览
+- Telegram: [@xuzongbin001](https://t.me/xuzongbin001)
+- Email: [masterai918@gmail.com](mailto:masterai918@gmail.com)
 
-| 八字排盘 | 紫微斗数 | 奇门遁甲 |
-![无极八字排盘](Screenshots/wujibazi.png)  
-**无极八字排盘界面 | Wuji Bazi Chart**
-
-![八字排盘](Screenshots/baizhipaipan.png)  
-**四柱八字排盘界面 | Four Pillars Bazi**
-
-![流年运势](Screenshots/liunian.png)  
-**流年运势分析 | Annual Luck Analysis**
-
-![大六壬排盘](Screenshots/daliuren.png)  
-**大六壬排盘界面 | Da Liuren Chart**
-
-![综合排盘](Screenshots/paipan.png)  
-**综合排盘总览界面 | Overall Divination Chart**
-
-![七政四余](Screenshots/qizhengsiyu.png)  
-**七政四余排盘界面 | Qizheng Siyü Chart**
-
-![七政四余2](Screenshots/qizheng2.png)  
-**七政四余详细排盘 | Qizheng Detailed**
-
-![五行分析](Screenshots/wuxing.png)  
-**五行分析界面 | Five Elements Analysis**
 ## License
 
-See the repository license files. Confirm licensing boundaries before public use, commercial deployment or closed-source integration.
+See [License.md](License.md). Third-party calendar and algorithm code may retain separate attribution and license requirements; verify each component before commercial use.

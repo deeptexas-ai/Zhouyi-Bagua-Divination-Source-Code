@@ -1,83 +1,71 @@
-# 周易八卦占卜源碼 | Zhouyi Bagua Divination Source Code
+# 周易排盤與八字原始碼 | JavaScript Bazi & Chinese Metaphysics
 
-[簡體中文](README.md) | [English](README.en.md) | [繁體中文](README.zh-TW.md)
+[簡體中文](README.md) | [繁體中文](README.zh-TW.md) | [English](README.en.md) | [產品網站](https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/zh-tw/)
 
-Zhouyi Bagua Divination Source Code 是一套面向傳統文化、命理工具與 AI 解讀產品的周易八卦占卜源碼項目，覆蓋三幣起卦、64 卦、384 爻、八卦羅盤、卦辭爻辭、四柱八字、紫微斗數、奇門遁甲、七政四餘、大六壬、五行分析與網頁即時排盤。
+這是一個以瀏覽器 JavaScript 為主體的傳統術數排盤原始碼倉庫。公開程式碼涵蓋四柱八字、干支與農曆轉換、十神與神煞、刑沖合害、五行、大運流年、時區與真太陽時相關計算，並包含七政四餘、大六壬及紫微運勢介面呼叫等產品元件。
 
-## 核心定位
+> 範圍說明：本頁只描述公開程式碼與真實截圖能核實的內容。倉庫沒有 `package.json`、Docker 設定、Python 服務、SQLite 資料庫或完整 64 卦資料，因此不應宣傳為已驗證的一鍵部署或完整三幣六爻系統。部分介面呼叫 `/api`，實際部署前需要補齊對應服務。
 
-- 周易源碼 / 易經源碼 / 周易八卦排盤系統
-- Zhouyi Bagua divination source code
-- 64 卦、三幣起卦、變卦、動爻與解卦流程
-- 四柱八字、紫微斗數、奇門遁甲、七政四餘、大六壬擴展方向
-- 適合 H5、Web、桌面、AI 命理、傳統文化與付費報告產品
-- 適合商業評估、二次開發與私有化部署
+## 產品介面
 
-## 核心功能
+| 四柱八字與大運 | 七政四餘排盤 |
+| --- | --- |
+| ![四柱八字、大運流年與真太陽時介面](docs/assets/screenshots/wujibazi.png) | ![七政四餘星曜、時區與經緯度輸入介面](docs/assets/screenshots/qizhengsiyu.png) |
+| 大六壬盤式 | 五行趨勢與排盤紀錄 |
+| ![大六壬天地盤、四課三傳排盤結果](docs/assets/screenshots/daliuren.png) | ![五行趨勢圖和排盤歷史紀錄](docs/assets/screenshots/wuxing.png) |
 
-- 周易八卦：乾、坤、震、巽、坎、離、艮、兌八卦基礎與方位五行
-- 起卦流程：傳統三幣法、六爻生成、本卦、動爻、變卦與卦象解讀
-- 64 卦系統：卦名、卦象、卦辭、爻辭、吉凶、時宜與建議輸出
-- 術數擴展：四柱八字、紫微斗數、奇門遁甲、七政四餘、大六壬
-- 產品場景：事業決策、感情運勢、財運分析、出行吉凶、學業選擇、家居風水
-- 技術形態：網頁即時排盤、移動端適配、離線使用、可擴展 AI 解讀
+## 主要功能
 
-## 項目結構建議
+### 四柱八字與曆法
 
-```text
-Screenshots/            # 產品截圖
-docs/                   # GitHub Pages 產品與技術文檔
-data/                   # 64 卦、爻辭、神煞與術數數據示例
-engine/                 # 起卦、排盤、解卦與算法模組
-ui/                     # Web/H5 介面組件
-config.example/         # 脫敏配置示例
-scripts/                # 構建、部署與維護腳本
-tests/                  # 卦象、排盤、日期與數據校驗測試
-.github/workflows/      # CI 與 GitHub Pages 自動發布
-```
+- 依公曆時間生成干支、四柱與十神相關資料。
+- 公曆與農曆轉換，包含節氣、生肖、儒略日等曆法元件。
+- 大運、流年、流月、流日、流時和換運時間展示。
+- 支援時區、經緯度及真太陽時相關輸入。
 
-## 公開倉庫安全建議
+### 五行、十神與神煞
 
-公開倉庫適合展示產品結構、部分源碼、截圖、數據示例與技術文檔。不要公開真實用戶資料、諮詢記錄、訂單數據、支付密鑰、後台帳號、生產配置、私有提示詞或未授權素材。
+- 天干地支與木、火、土、金、水的映射和生剋關係。
+- 十神、藏干以及干支刑、沖、合、害關係。
+- `shensha.js` 中的神煞規則、說明和按干支查詢邏輯。
+- 五行趨勢參數、圖表及歷史排盤介面。
 
-## 文檔
+### 七政四餘、大六壬與擴充元件
 
-- [項目主頁](docs/index.html)
-- [功能介紹](docs/features.html)
-- [架構說明](docs/architecture.html)
-- [部署指南](docs/deployment.html)
-- [合規使用](docs/responsible-use.html)
+- 七政四餘星曜選擇、經緯度、時區與排盤結果介面。
+- `kinliuren.js` 提供大六壬盤式計算元件。
+- `index.js` 包含紫微運勢圖和反推功能的介面呼叫與圖表渲染程式碼。
+- 搜盤、拆補、宮位、九星、八門等篩選項可由截圖介面核實。
 
-## 聯繫方式
+## 程式碼結構
 
-Telegram：`@xuzongbin001`  
-Email：`masterai918@gmail.com`
-## 📸 界面预览
+| 檔案 | 可核實職責 |
+| --- | --- |
+| `index.html` / `index.js` | 排盤頁面、輸入流程、圖表和 API 互動 |
+| `lunar.js` / `nongli.js` | 公曆、農曆、干支與節氣計算 |
+| `paipan.js` | 天文曆法、節氣、真太陽時和排運基礎 |
+| `paipan.gx.js` | 十神、藏干、刑沖合害關係 |
+| `shensha.js` | 神煞規則、說明與查詢 |
+| `kinliuren.js` | 大六壬相關計算 |
+| `timezone.js` | 時區、經緯度與偏移資料 |
 
-| 八字排盘 | 紫微斗数 | 奇门遁甲 |
-![无极八字排盘](Screenshots/wujibazi.png)  
-**无极八字排盘界面 | Wuji Bazi Chart**
+## 更多真實截圖
 
-![八字排盘](Screenshots/baizhipaipan.png)  
-**四柱八字排盘界面 | Four Pillars Bazi**
+| 搜盤條件 | 流年星盤 |
+| --- | --- |
+| ![八字搜盤條件與格局篩選](docs/assets/screenshots/baizhipaipan.png) | ![流年星體黃經與星盤資料](docs/assets/screenshots/liunian.png) |
+| 七政四餘綜合盤 | 星曜組合結果 |
+| ![七政四餘綜合排盤資料表](docs/assets/screenshots/paipan.png) | ![七政四餘多組星曜結果](docs/assets/screenshots/qizheng2.png) |
 
-![流年运势](Screenshots/liunian.png)  
-**流年运势分析 | Annual Luck Analysis**
+## 使用與部署邊界
 
-![大六壬排盘](Screenshots/daliuren.png)  
-**大六壬排盘界面 | Da Liuren Chart**
+公開頁面可以直接閱讀原始檔，但完整執行環境可能依賴倉庫外的樣式、圖表庫和 `/api` 服務。上線前應核對依賴授權、介面實作、資料隱私和計算結果，並補充測試。命理與占卜內容只適合傳統文化研究和娛樂參考，不應取代醫療、法律、投資或其他專業建議。
 
-![综合排盘](Screenshots/paipan.png)  
-**综合排盘总览界面 | Overall Divination Chart**
+## 聯絡方式
 
-![七政四余](Screenshots/qizhengsiyu.png)  
-**七政四余排盘界面 | Qizheng Siyü Chart**
+- Telegram：[@xuzongbin001](https://t.me/xuzongbin001)
+- Email：[masterai918@gmail.com](mailto:masterai918@gmail.com)
 
-![七政四余2](Screenshots/qizheng2.png)  
-**七政四余详细排盘 | Qizheng Detailed**
-
-![五行分析](Screenshots/wuxing.png)  
-**五行分析界面 | Five Elements Analysis**
 ## License
 
-具體以倉庫 License 文件為準。公開使用、商業部署和閉源集成前，請確認授權邊界。
+以倉庫中的 [License.md](License.md) 為準。第三方曆法和演算法程式碼可能保留各自署名及授權要求，商用前請逐項核實。

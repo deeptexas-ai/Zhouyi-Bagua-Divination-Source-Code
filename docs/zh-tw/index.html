@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>周易八字排盤原始碼 | JavaScript術數</title>
+  <meta name="description" content="周易八字排盤原始碼：JavaScript 四柱八字、農曆干支、五行神煞、大運流年、七政四餘和大六壬，配真實產品截圖。">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/zh-tw/">
+  <link rel="alternate" hreflang="en" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/">
+  <link rel="alternate" hreflang="zh-CN" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/zh-cn/">
+  <link rel="alternate" hreflang="zh-TW" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/zh-tw/">
+  <link rel="alternate" hreflang="x-default" href="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/">
+  <link rel="stylesheet" href="../assets/style.css">
+  <meta property="og:title" content="周易八字排盤原始碼"><meta property="og:description" content="四柱八字、農曆干支、五行神煞、七政四餘和大六壬 JavaScript 原始碼元件。"><meta property="og:image" content="https://deeptexas-ai.github.io/Zhouyi-Bagua-Divination-Source-Code/assets/screenshots/wujibazi.png">
+</head>
+<body>
+  <nav class="topbar"><div class="wrap"><a class="brand" href="../">周易排盤原始碼</a><div class="nav"><a href="../">English</a><a href="../zh-cn/">简体中文</a><a href="./">繁體中文</a><a href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">GitHub</a></div></div></nav>
+  <header class="hero"><div class="wrap hero-inner"><p class="eyebrow">JavaScript · 曆法引擎 · 排盤介面</p><h1>周易八字排盤原始碼</h1><p>以真實產品截圖和公開程式碼說明四柱八字、農曆干支、五行神煞、大運流年、七政四餘和大六壬，不用無法核實的技術棧包裝專案。</p><div class="actions"><a class="button" href="#features">查看核心模組</a><a class="button alt" href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">查看 GitHub</a></div></div></header>
+  <main>
+    <section class="section white" id="features"><div class="wrap"><p class="eyebrow">可核實範圍</p><h2>從出生時間到結構化術數排盤</h2><p class="lead">公開 JavaScript 將曆法轉換、干支關係、排盤參數和圖表介面連接起來。所有功能描述均以程式碼或截圖為依據。</p><div class="feature-grid"><div class="feature"><b>01 曆法</b><h3>公曆、農曆與干支</h3><p>公農曆轉換、節氣、生肖、干支、時區和經緯度資料支撐排盤輸入。</p></div><div class="feature"><b>02 八字</b><h3>四柱與大運流年</h3><p>四柱、十神、藏干、大運，以及流年、流月、流日和流時均在程式碼和介面中出現。</p></div><div class="feature"><b>03 關係</b><h3>五行、刑沖合害與神煞</h3><p>五行映射、生剋關係、干支刑沖合害與神煞查詢規則均有公開實作。</p></div></div></div></section>
+    <section class="section"><div class="wrap">
+      <div class="story"><div class="media"><img src="../assets/screenshots/wujibazi.png" alt="四柱八字大運流年真太陽時排盤原始碼介面"></div><div class="story-copy"><p class="eyebrow">四柱八字</p><h3>本命四柱連接後續運程時間線</h3><p>介面集中展示出生時間、農曆、經緯度、真太陽時、四柱、大運和後續流年；對應 JavaScript 負責曆法與干支資料處理。</p></div></div>
+      <div class="story reverse"><div class="media"><img src="../assets/screenshots/qizhengsiyu.png" alt="七政四餘星曜時區經緯度排盤介面"></div><div class="story-copy"><p class="eyebrow">七政四餘</p><h3>星曜選擇與時間地點參數</h3><ul><li>時間、時區、經度與緯度輸入</li><li>七政四餘和占星星曜選擇</li><li>排盤、推運與反推入口</li></ul></div></div>
+      <div class="story"><div class="media"><img src="../assets/screenshots/daliuren.png" alt="大六壬天地盤四課三傳排盤結果"></div><div class="story-copy"><p class="eyebrow">大六壬</p><h3>天地盤、四課與三傳結構</h3><p>倉庫包含 `kinliuren.js` 計算元件，真實介面展示大六壬環形盤式和四課三傳結果表。</p></div></div>
+    </div></section>
+    <section class="section dark"><div class="wrap"><p class="eyebrow">程式碼結構</p><h2>瀏覽器 JavaScript、曆法與排盤模組</h2><p class="lead">這個公開目錄不是 Docker 或 Python 專案。可核實核心是 JavaScript，以及呼叫配套 API 的產品流程。</p><div class="code-grid"><div class="code-item"><h3>曆法</h3><p>`lunar.js`、`nongli.js`、`paipan.js` 處理日期、節氣與天文曆法計算。</p></div><div class="code-item"><h3>關係</h3><p>`paipan.gx.js` 處理十神、藏干以及天干地支的刑沖合害。</p></div><div class="code-item"><h3>神煞</h3><p>`shensha.js` 包含規則表、文字說明和按盤面位置查詢的函式。</p></div><div class="code-item"><h3>應用</h3><p>`index.js` 連接輸入、圖表、五行介面和依賴 API 的紫微運勢流程。</p></div></div></div></section>
+    <section class="section white"><div class="wrap"><h2>真實結果頁面，不使用佔位圖</h2><p class="lead">產品截圖展示搜盤篩選、星體資料、綜合排盤和五行趨勢的真實資訊密度。</p><div class="gallery"><figure><img src="../assets/screenshots/baizhipaipan.png" alt="八字搜盤條件與格局篩選"><figcaption>八字搜盤與格局篩選</figcaption></figure><figure><img src="../assets/screenshots/liunian.png" alt="流年星體黃經和星盤資料"><figcaption>流年星體位置資料</figcaption></figure><figure><img src="../assets/screenshots/paipan.png" alt="七政四餘綜合排盤結果表"><figcaption>七政四餘綜合結果</figcaption></figure><figure><img src="../assets/screenshots/wuxing.png" alt="五行趨勢與排盤歷史"><figcaption>五行趨勢與排盤歷史</figcaption></figure></div></div></section>
+    <section class="section"><div class="wrap"><div class="contact"><div><h2>洽詢原始碼與交付範圍</h2><p>Telegram：<a href="https://t.me/xuzongbin001">@xuzongbin001</a>　Email：<a href="mailto:masterai918@gmail.com">masterai918@gmail.com</a></p></div><a class="button" href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">開啟倉庫</a></div><p class="scope">公開目錄沒有證明一鍵部署、Docker、Python、SQLite、完整 64 卦資料或全部 API 服務。使用前請核對依賴、授權、隱私和計算結果。命理內容僅供傳統文化研究和娛樂參考，不應取代醫療、法律、投資等專業意見。</p></div></section>
+  </main>
+  <footer class="footer"><div class="wrap"><span>周易八字排盤原始碼</span><span><a href="../">English</a> · <a href="../zh-cn/">简体中文</a> · <a href="https://github.com/deeptexas-ai/Zhouyi-Bagua-Divination-Source-Code">GitHub</a></span></div></footer>
+</body>
+</html>
